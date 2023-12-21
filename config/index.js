@@ -19,9 +19,9 @@ const config = {
     options: {
     }
   },
-  framework: 'React',
+  framework: 'react',
   compiler: {
-    type: 'Webpack5',
+    type: 'webpack5',
     prebundle: { enable: false }
   },
   mini: {
