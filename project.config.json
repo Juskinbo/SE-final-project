@@ -2,7 +2,6 @@
   "miniprogramRoot": "dist/",
   "projectname": "SE-final-project",
   "description": "软件工程期末大作业",
-  "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -14,7 +13,8 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.25.3",
