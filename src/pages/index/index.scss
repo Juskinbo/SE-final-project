@@ -1,28 +1,20 @@
-.nutui-react-demo {
-  height: 100vh;
+.city-select {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
 }
 
-.index {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24rpx;
-  margin-bottom: 30px;
+.tab-pane {
+  padding-top: 0;
+  background: rgba(255, 0, 0, 0);
 }
 
-.title {
-  display: block;
-  margin: 20px 0;
-  font-weight: 600;
+.header-bar {
+  padding-bottom: 50px;
 }
-
-.btn {
-  display: block;
-  width: 200px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
+// .header-bar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+// }
