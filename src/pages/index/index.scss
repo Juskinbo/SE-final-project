@@ -12,6 +12,11 @@
 .header-bar {
   padding-bottom: 50px;
 }
+
+.tab-pane:not(:first-child) {
+  padding: 0;
+}
+
 // .header-bar {
 //   position: fixed;
 //   top: 0;

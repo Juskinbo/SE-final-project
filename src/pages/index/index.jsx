@@ -5,6 +5,7 @@ import {
   SearchBar,
   Tabbar,
   Tabs,
+  Image,
   ConfigProvider,
 } from '@nutui/nutui-react-taro'
 import {
@@ -24,10 +25,11 @@ function Index() {
     background: 'linear-gradient(to bottom, #cab69b 10%, #fff 20%)',
   })
   const [headerBarTheme, setHeaderBarTheme] = useState({
-    nutuiSearchbarWidth: '80%',
+    nutuiSearchbarContentBackground: '#f5f5f5',
     nutuiSearchbarBackground: 'rgba(255, 0, 0, 0)',
     nutuiTabsTitlesBackgroundColor: 'rgba(255, 0, 0, 0)',
   })
+  const [tabValue, setTabValue] = useState(0)
   const [fontColor, setFontColor] = useState({ color: '#fff' })
   const handleSwiperValue = (value) => {
     switch (value) {
@@ -54,15 +56,18 @@ function Index() {
     }
   }
   usePageScroll((res) => {
-    if (res.scrollTop > 0) {
+    if (res.scrollTop > 0 && tabValue === 0) {
       setHeaderBarTheme({
         nutuiSearchbarBackground: '#fff',
+        nutuiSearchbarContentBackground: '#f5f5f5',
         nutuiTabsTitlesBackgroundColor: '#fff',
       })
       setFontColor({ color: '#000' })
-    } else {
+    } else if (tabValue === 0) {
+      console.log('tabValue', tabValue)
       setHeaderBarTheme({
         nutuiSearchbarBackground: 'rgba(255, 0, 0, 0)',
+        nutuiSearchbarContentBackground: '#f5f5f5',
         nutuiTabsTitlesBackgroundColor: 'rgba(255, 0, 0, 0)',
       })
       setFontColor({ color: '#fff' })
@@ -87,10 +92,28 @@ function Index() {
           />
 
           <Tabs
-            // value={tab1value}
-            // onChange={(value) => {
-            //   setTab1value(value)
-            // }}
+            value={tabValue}
+            onChange={(value) => {
+              setTabValue(value)
+              if (value !== 0) {
+                setHeaderBarTheme({
+                  nutuiSearchbarBackground: '#fff',
+                  nutuiTabsTitlesBackgroundColor: '#fff',
+                })
+                setFontColor({ color: '#000' })
+                setBackGround({
+                  background: '#fff',
+                })
+              } else {
+                console.log(value)
+                setHeaderBarTheme({
+                  nutuiSearchbarBackground: '#fff',
+                  nutuiSearchbarContentBackground: '#f5f5f5',
+                  nutuiTabsTitlesBackgroundColor: '#fff',
+                })
+                setFontColor({ color: '#000' })
+              }
+            }}
             activeType='simple'
             tabStyle={{ position: 'sticky', top: '44px', zIndex: 11 }}
           >
@@ -104,19 +127,22 @@ function Index() {
               title={<span style={fontColor}>怒潮</span>}
               className='tab-pane'
             >
-              怒潮
+              {/* 怒潮 */}
+              <Image src='https://p0.pipi.cn/friday/a70ac5ebf2f54d38fca66e1ce7fcb960.jpg?imageView2/2/w/1500/q/80' />
             </Tabs.TabPane>
             <Tabs.TabPane
               title={<span style={fontColor}>一闪一闪</span>}
               className='tab-pane'
             >
-              一闪一闪
+              {/* 一闪一闪 */}
+              <Image src='https://p0.pipi.cn/friday/148a8311e6f734d43b5cf72ab27b1344.jpg?imageView2/2/w/1500/q/80' />
             </Tabs.TabPane>
             <Tabs.TabPane
               title={<span style={fontColor}>年会不停</span>}
               className='tab-pane'
             >
-              年会不停
+              {/* 年会不停 */}
+              <Image src='https://p0.pipi.cn/friday/9767c01055af7eda2fd8046b115fcac1.jpg?imageView2/2/w/1500/q/80' />
             </Tabs.TabPane>
             <Tabs.TabPane
               title={<span style={fontColor}>热片解读</span>}
