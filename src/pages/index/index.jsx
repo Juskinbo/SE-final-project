@@ -20,6 +20,8 @@ import {
 import RecommendedComponent from '../../components/RecommendedComponent/RecommendedComponent'
 import './index.scss'
 
+let backgroundValue = 0
+
 function Index() {
   const [backGround, setBackGround] = useState({
     background: 'linear-gradient(to bottom, #cab69b 10%, #fff 20%)',
@@ -31,28 +33,37 @@ function Index() {
   })
   const [tabValue, setTabValue] = useState(0)
   const [fontColor, setFontColor] = useState({ color: '#fff' })
-  const handleSwiperValue = (value) => {
-    switch (value) {
-      case 0:
-        setBackGround({
-          background: 'linear-gradient(to bottom, #cab69b 10%, #fff 20%)',
-        })
-        break
-      case 1:
-        setBackGround({
-          background: 'linear-gradient(to bottom, #335e72 10%, #fff 20%)',
-        })
-        break
-      case 2:
-        setBackGround({
-          background: 'linear-gradient(to bottom, #064213 10%, #fff 20%)',
-        })
-        break
-      case 3:
-        setBackGround({
-          background: 'linear-gradient(to bottom, #675b49 10%, #fff 20%)',
-        })
-        break
+  const handleSwiperValue = (...value) => {
+    console.log('value', value)
+    console.log('backgroundValue', backgroundValue)
+    console.log('length', value.length)
+    console.log('tabValue', tabValue)
+    if (value.length !== 0) {
+      backgroundValue = value[0]
+    }
+    if (tabValue === 0) {
+      switch (backgroundValue) {
+        case 0:
+          setBackGround({
+            background: 'linear-gradient(to bottom, #cab69b 10%, #fff 20%)',
+          })
+          break
+        case 1:
+          setBackGround({
+            background: 'linear-gradient(to bottom, #335e72 10%, #fff 20%)',
+          })
+          break
+        case 2:
+          setBackGround({
+            background: 'linear-gradient(to bottom, #064213 10%, #fff 20%)',
+          })
+          break
+        case 3:
+          setBackGround({
+            background: 'linear-gradient(to bottom, #675b49 10%, #fff 20%)',
+          })
+          break
+      }
     }
   }
   usePageScroll((res) => {
@@ -71,6 +82,7 @@ function Index() {
         nutuiTabsTitlesBackgroundColor: 'rgba(255, 0, 0, 0)',
       })
       setFontColor({ color: '#fff' })
+      handleSwiperValue()
     }
   })
   return (
@@ -90,11 +102,11 @@ function Index() {
               </div>
             }
           />
-
           <Tabs
             value={tabValue}
             onChange={(value) => {
               setTabValue(value)
+              console.log(value)
               if (value !== 0) {
                 setHeaderBarTheme({
                   nutuiSearchbarBackground: '#fff',
