@@ -1,0 +1,41 @@
+.seat-select {
+  height: 100vh;
+  background: #f6f6f6;
+  .nut-cell {
+    margin: 5px 0;
+    background: #f6f6f6;
+  }
+  .seat-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .seat {
+      margin-right: 5px;
+      .nut-checkbox-button {
+        border: 1px solid #ffb9c5;
+      }
+      .nut-checkbox-button-active {
+        border: 1px solid #4cd696;
+        background: #4cd696;
+      }
+    }
+  }
+  .seat-info {
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    .seat-info-item {
+      padding: 20px 10px;
+      border-radius: 10px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    .selected-seat {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 12px;
+    }
+  }
+}
