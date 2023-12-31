@@ -1,4 +1,5 @@
 import React from 'react'
+import Taro from '@tarojs/taro'
 import { ScrollView } from '@tarojs/components'
 import {
   Swiper,
@@ -94,7 +95,7 @@ const RecommendedComponent = ({ getSwiperValue }) => {
         <ScrollView scrollX scrollWithAnimation>
           <ConfigProvider
             theme={{
-              nutuiGridBorderColor: 'rgba(255, 0, 0, 0)',
+              nutuiGridBorderColor: 'rgba(0, 0, 0, 0)',
               nutuiGridItemContentPadding: '8px 4px',
               nutuiGridItemTextColor: '#707070',
             }}
@@ -122,7 +123,7 @@ const RecommendedComponent = ({ getSwiperValue }) => {
         <ScrollView scrollX scrollWithAnimation>
           <ConfigProvider
             theme={{
-              nutuiGridBorderColor: 'rgba(255, 0, 0, 0)',
+              nutuiGridBorderColor: 'rgba(0, 0, 0, 0)',
               nutuiGridItemContentPadding: '8px 4px',
             }}
           >
@@ -136,6 +137,9 @@ const RecommendedComponent = ({ getSwiperValue }) => {
                         <Button
                           size='mini'
                           type={item.type === '购票' ? 'primary' : 'info'}
+                          onClick={() =>
+                            Taro.navigateTo({ url: '/pages/movie/movie' })
+                          }
                         >
                           {item.type}
                         </Button>
@@ -172,7 +176,7 @@ const RecommendedComponent = ({ getSwiperValue }) => {
         <ScrollView scrollX scrollWithAnimation>
           <ConfigProvider
             theme={{
-              nutuiGridBorderColor: 'rgba(255, 0, 0, 0)',
+              nutuiGridBorderColor: 'rgba(0, 0, 0, 0)',
               nutuiGridItemContentPadding: '8px 4px',
             }}
           >
