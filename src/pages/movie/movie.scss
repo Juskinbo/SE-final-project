@@ -1,0 +1,35 @@
+.movie-info {
+  margin: 0 20px 30px 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .movie-info-text {
+    margin-left: 20px;
+    color: #bbc0c6;
+    font-size: 14px;
+    .movie-name {
+      color: white;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    .movie-score {
+      color: #f5c518;
+      font-size: 18px;
+    }
+    .follow-button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+.theater-select {
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  .nut-tabpane {
+    padding: 0;
+  }
+}
