@@ -77,8 +77,8 @@ const MeComponent = () => {
       <View className='movie-list'>
         <ConfigProvider
           theme={{
-            nutuiGridBorderColor: 'rgba(255, 0, 0, 0)',
-            nutuiGridItemContentBgColor: 'rgba(255, 0, 0, 0)',
+            nutuiGridBorderColor: 'rgba(0, 0, 0, 0)',
+            nutuiGridItemContentBgColor: 'rgba(0, 0, 0, 0)',
           }}
         >
           <Grid columns={2}>
@@ -107,8 +107,8 @@ const MeComponent = () => {
           description={
             <ConfigProvider
               theme={{
-                nutuiGridBorderColor: 'rgba(255, 0, 0, 0)',
-                nutuiGridItemContentBgColor: 'rgba(255, 0, 0, 0)',
+                nutuiGridBorderColor: 'rgba(0, 0, 0, 0)',
+                nutuiGridItemContentBgColor: 'rgba(0, 0, 0, 0)',
                 nutuiGridItemContentPadding: '16px 0 8px 0',
               }}
             >
@@ -131,8 +131,8 @@ const MeComponent = () => {
           description={
             <ConfigProvider
               theme={{
-                nutuiGridBorderColor: 'rgba(255, 0, 0, 0)',
-                nutuiGridItemContentBgColor: 'rgba(255, 0, 0, 0)',
+                nutuiGridBorderColor: 'rgba(0, 0, 0, 0)',
+                nutuiGridItemContentBgColor: 'rgba(0, 0, 0, 0)',
                 nutuiGridItemContentPadding: '0',
               }}
             >

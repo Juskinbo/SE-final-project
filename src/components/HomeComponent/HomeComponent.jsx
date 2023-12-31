@@ -13,8 +13,8 @@ const HomeComponent = () => {
   })
   const [headerBarTheme, setHeaderBarTheme] = useState({
     nutuiSearchbarContentBackground: '#f5f5f5',
-    nutuiSearchbarBackground: 'rgba(255, 0, 0, 0)',
-    nutuiTabsTitlesBackgroundColor: 'rgba(255, 0, 0, 0)',
+    nutuiSearchbarBackground: 'rgba(0, 0, 0, 0)',
+    nutuiTabsTitlesBackgroundColor: 'rgba(0, 0, 0, 0)',
   })
   const [tabValue, setTabValue] = useState(0)
   const [fontColor, setFontColor] = useState({ color: '#fff' })
@@ -57,9 +57,9 @@ const HomeComponent = () => {
       setFontColor({ color: '#000' })
     } else if (tabValue === 0) {
       setHeaderBarTheme({
-        nutuiSearchbarBackground: 'rgba(255, 0, 0, 0)',
+        nutuiSearchbarBackground: 'rgba(0, 0, 0, 0)',
         nutuiSearchbarContentBackground: '#f5f5f5',
-        nutuiTabsTitlesBackgroundColor: 'rgba(255, 0, 0, 0)',
+        nutuiTabsTitlesBackgroundColor: 'rgba(0, 0, 0, 0)',
       })
       setFontColor({ color: '#fff' })
       handleSwiperValue()
