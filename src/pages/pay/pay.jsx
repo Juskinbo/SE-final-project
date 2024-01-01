@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import {
   Image,
@@ -7,7 +8,6 @@ import {
   Button,
   Cell,
   Divider,
-  ConfigProvider,
 } from '@nutui/nutui-react-taro'
 import { Checked, ArrowSize8, ArrowUp } from '@nutui/icons-react-taro'
 import poster from '../../assets/posters/Aquaman.jpg'
@@ -205,7 +205,16 @@ const Pay = () => {
                   <ArrowUp size='14' />
                 </span>
               </View>
-              <Button type='primary'>确认支付</Button>
+              <Button
+                type='primary'
+                onClick={() => {
+                  Taro.navigateTo({
+                    url: '/pages/ticket/ticket',
+                  })
+                }}
+              >
+                确认支付
+              </Button>
             </View>
           </Cell>
         </View>
