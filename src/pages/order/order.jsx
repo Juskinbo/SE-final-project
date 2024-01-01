@@ -96,7 +96,13 @@ const Order = () => {
                 alignItems: 'center',
               }}
             >
-              <Button color='#666' fill='outline'>
+              <Button
+                color='#666'
+                fill='outline'
+                onClick={() => {
+                  Taro.navigateTo({ url: '/pages/return/return' })
+                }}
+              >
                 申请退款
               </Button>
               <Button
