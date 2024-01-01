@@ -1,4 +1,5 @@
 import React from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Cell, Divider, Image, Button } from '@nutui/nutui-react-taro'
 import aquamanImg from '../../assets/posters/Aquaman.jpg'
@@ -68,7 +69,14 @@ const Order = () => {
                 <span style={{ color: '#999' }}>5号厅 7排5座</span>
               </View>
             </View>
-            <Button type='primary'>查看取票码</Button>
+            <Button
+              type='primary'
+              onClick={() => {
+                Taro.navigateTo({ url: '/pages/ticket/ticket' })
+              }}
+            >
+              查看取票码
+            </Button>
           </View>
           <Divider />
           <View
@@ -121,7 +129,7 @@ const Order = () => {
             }}
           >
             <span style={{ color: '#999' }}>横店电影城（博雅城店）</span>
-            <span style={{ color: '#999' }}>待消费</span>
+            <span style={{ color: '#999' }}>已完成</span>
           </View>
           <Divider />
           <View
@@ -162,7 +170,7 @@ const Order = () => {
                 <span style={{ color: '#999' }}>5号厅 7排5座</span>
               </View>
             </View>
-            <Button type='primary'>查看取票码</Button>
+            <Button type='primary'>评价影片</Button>
           </View>
           <Divider />
           <View
@@ -256,7 +264,6 @@ const Order = () => {
                 <span style={{ color: '#999' }}>5号厅 7排5座</span>
               </View>
             </View>
-            <Button type='primary'>评价影片</Button>
           </View>
           <Divider />
           <View
