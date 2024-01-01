@@ -55,7 +55,7 @@ const Time = () => {
             }}
           >
             <span style={{ fontSize: '16px' }}>
-              海王2：失踪的王国 <i style={{ color: '#ffb400' }}>8.8分</i>
+              海王2：失落的王国 <i style={{ color: '#ffb400' }}>8.8分</i>
             </span>
             <span style={{ color: '#9a9a9a' }}>125分钟 | 动作 | 杰森·莫玛</span>
           </View>

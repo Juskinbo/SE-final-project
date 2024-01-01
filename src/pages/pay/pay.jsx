@@ -14,7 +14,7 @@ import poster from '../../assets/posters/Aquaman.jpg'
 
 import './pay.scss'
 const Pay = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   return (
     <>
       <View

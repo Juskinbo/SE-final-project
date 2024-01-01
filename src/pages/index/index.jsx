@@ -4,6 +4,7 @@ import { View } from '@tarojs/components'
 import { Tabbar } from '@nutui/nutui-react-taro'
 import { Cart, Category, Find, Home, User } from '@nutui/icons-react-taro'
 import HomeComponent from '../../components/HomeComponent/HomeComponent'
+import MeComponent from '../../components/MeComponent/MeComponent'
 
 import './index.scss'
 
@@ -12,6 +13,10 @@ function Index() {
   return (
     <View>
       {showComponent === 0 && <HomeComponent />}
+      {showComponent === 1 && <HomeComponent />}
+      {showComponent === 2 && <HomeComponent />}
+      {showComponent === 3 && <HomeComponent />}
+      {showComponent === 4 && <MeComponent />}
       <View className='bottom-navigation'>
         <Tabbar
           onSwitch={(child) => {

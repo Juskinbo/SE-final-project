@@ -1,4 +1,5 @@
 import React from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Button, Cell, Checkbox, ConfigProvider } from '@nutui/nutui-react-taro'
 
@@ -557,6 +558,9 @@ const Seat = () => {
           </View>
           <Button
             block
+            onClick={() => {
+              Taro.navigateTo({ url: '/pages/pay/pay' })
+            }}
             color='#ff800e'
             size='large'
             style={{ fontSize: '18px', '--nutui-button-border-width': '0' }}
