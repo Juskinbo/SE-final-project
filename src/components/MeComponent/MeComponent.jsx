@@ -1,4 +1,5 @@
 import React from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import {
   Avatar,
@@ -115,7 +116,18 @@ const MeComponent = () => {
               <Grid columns={4}>
                 {myOrderList.map((item, index) => {
                   return (
-                    <Grid.Item key={index}>
+                    <Grid.Item
+                      key={index}
+                      onClick={
+                        index === 0
+                          ? () => {
+                              Taro.navigateTo({
+                                url: '/pages/order/order',
+                              })
+                            }
+                          : () => {}
+                      }
+                    >
                       {item.icon}
                       <span className='my-order-content'>{item.content}</span>
                     </Grid.Item>
@@ -124,7 +136,7 @@ const MeComponent = () => {
               </Grid>
             </ConfigProvider>
           }
-        ></Cell>
+        />
       </View>
       <View className='discount-info'>
         <Cell
@@ -150,7 +162,7 @@ const MeComponent = () => {
               </Grid>
             </ConfigProvider>
           }
-        ></Cell>
+        />
       </View>
     </View>
   )
