@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Menu, Cell, Tag } from '@nutui/nutui-react-taro'
 
@@ -20,6 +21,7 @@ const TheaterListComponent = () => {
         <Cell
           onClick={() => {
             console.log('click')
+            Taro.navigateTo({ url: '/pages/time/time' })
           }}
           title={
             <span style={{ fontWeight: 'bold' }}>横店电影城（博雅城店）</span>
