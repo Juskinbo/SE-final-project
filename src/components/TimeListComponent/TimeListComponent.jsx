@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Menu, Cell, Tag, Button } from '@nutui/nutui-react-taro'
 
@@ -68,7 +69,9 @@ const TimeListComponent = () => {
                     <span>35.4元</span>
                   </Tag>
                 </View>
-                <Button color='#f03f48' fill='outline'>
+                <Button color='#f03f48' fill='outline' onClick={()=>{
+                  Taro.navigateTo({url:'/pages/seat/seat'})
+                }}>
                   购票
                 </Button>
               </View>
