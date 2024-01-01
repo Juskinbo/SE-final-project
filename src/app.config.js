@@ -6,6 +6,9 @@ export default defineAppConfig({
     'pages/seat/seat',
     'pages/pay/pay',
     'pages/order/order',
+    'pages/ticket/ticket',
+    'pages/return/return',
+    'pages/detail/detail',
   ],
   window: {
     backgroundTextStyle: 'light',
