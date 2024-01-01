@@ -1,6 +1,5 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "SE-final-project",
   "description": "软件工程期末大作业",
   "setting": {
     "urlCheck": true,
@@ -14,19 +13,23 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "coverView": false,
+    "showShadowRootInWxmlPanel": false,
+    "packNpmRelationList": []
   },
   "compileType": "miniprogram",
-  "libVersion": "2.25.3",
   "srcMiniprogramRoot": "dist/",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "appid": "wxb2b066e503a4f517"
+  "appid": "wxb2b066e503a4f517",
+  "libVersion": "2.25.3",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "projectname": "SE-final-project"
 }
