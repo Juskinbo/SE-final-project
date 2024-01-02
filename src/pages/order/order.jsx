@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { Cell, Divider, Image, Button } from '@nutui/nutui-react-taro'
+import { Cell, Divider, Image, Button, Dialog } from '@nutui/nutui-react-taro'
 import aquamanImg from '../../assets/posters/Aquaman.jpg'
 
 import './order.scss'
 
 const Order = () => {
+  const [visible, setVisible] = useState(false)
   return (
     <View style={{ background: '#f5f5f5', height: '100vh' }}>
       <Cell style={{ marginTop: '10px' }}>
@@ -109,6 +110,9 @@ const Order = () => {
                 color='#666'
                 fill='outline'
                 style={{ marginLeft: '10px' }}
+                onClick={() => {
+                  setVisible(true)
+                }}
               >
                 申请改签
               </Button>
@@ -303,6 +307,46 @@ const Order = () => {
           </View>
         </View>
       </Cell>
+      <Dialog
+        title='改签说明'
+        visible={visible}
+        confirmText='开始改签'
+        hideCancelButton
+        onConfirm={() =>
+          setVisible(false) &
+          Taro.navigateTo({ url: '/pages/time/time?type=rebook' })
+        }
+      >
+        <Cell.Group>
+          <Cell>
+            <span
+              style={{
+                fontSize: '12px',
+              }}
+            >
+              开场前60分钟且未取票可申请改签,限同一影院,不限影片、场次
+            </span>
+          </Cell>
+          <Cell>
+            <span
+              style={{
+                fontSize: '12px',
+              }}
+            >
+              普通会员，每月可改签1次，V1-V4会员，每月可改签2次，V5及以上会员，每月可改签3次
+            </span>
+          </Cell>
+          <Cell>
+            <span
+              style={{
+                fontSize: '12px',
+              }}
+            >
+              每笔订单限改签一次，改签后的电影票不支持继续改签、退票
+            </span>
+          </Cell>
+        </Cell.Group>
+      </Dialog>
     </View>
   )
 }
