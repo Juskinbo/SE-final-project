@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
-import Taro from '@tarojs/taro'
+import Taro, { getCurrentInstance } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Menu, Cell, Tag, Button } from '@nutui/nutui-react-taro'
 
 import './TimeListComponent.scss'
 
-const TimeListComponent = () => {
-  const list = (length) => {
+class TimeListComponent extends React.Component {
+  $instance = getCurrentInstance()
+  params = null
+  componentDidMount() {
+    this.params = this.$instance.router.params
+    if (this.params.type) {
+      console.log(this.params)
+    }
+  }
+
+  list(length) {
     let res = []
     for (let i = 0; i < length; i++) {
       res.push(
@@ -69,9 +78,22 @@ const TimeListComponent = () => {
                     <span>35.4元</span>
                   </Tag>
                 </View>
-                <Button color='#f03f48' fill='outline' onClick={()=>{
-                  Taro.navigateTo({url:'/pages/seat/seat'})
-                }}>
+                <Button
+                  color='#f03f48'
+                  fill='outline'
+                  onClick={() => {
+                    console.log(this.params)
+                    if (this.params?.type) {
+                      Taro.navigateTo({
+                        url: '/pages/seat/seat?type=' + this.params.type,
+                      })
+                    } else {
+                      Taro.navigateTo({
+                        url: '/pages/seat/seat',
+                      })
+                    }
+                  }}
+                >
                   购票
                 </Button>
               </View>
@@ -82,10 +104,12 @@ const TimeListComponent = () => {
     }
     return res
   }
-  return (
-    <View>
-      <Cell.Group>{list(20)}</Cell.Group>
-    </View>
-  )
+  render() {
+    return (
+      <View>
+        <Cell.Group>{this.list(20)}</Cell.Group>
+      </View>
+    )
+  }
 }
 export default TimeListComponent
