@@ -135,22 +135,18 @@ const HomeComponent = () => {
               <Image src='https://p0.pipi.cn/friday/9767c01055af7eda2fd8046b115fcac1.jpg?imageView2/2/w/1500/q/80' />
             </Tabs.TabPane>
             <Tabs.TabPane
-              title={<span style={fontColor}>热片解读</span>}
+              title={<span style={fontColor}>金手指</span>}
               className='tab-pane'
             >
-              热片解读
+              {/* 金手指 */}
+              <Image src='https://p0.pipi.cn/friday/18506b8ad9954e880e764f2682dce3ff.jpg?imageView2/2/w/1500/q/80' />
             </Tabs.TabPane>
             <Tabs.TabPane
-              title={<span style={fontColor}>新片预告</span>}
+              title={<span style={fontColor}>舒克贝塔</span>}
               className='tab-pane'
             >
-              新片预告
-            </Tabs.TabPane>
-            <Tabs.TabPane
-              title={<span style={fontColor}>速看电影</span>}
-              className='tab-pane'
-            >
-              速看电影
+              {/* 舒克贝塔 */}
+              <Image src='https://p0.pipi.cn/friday/48e2c800770c9ac67439e06a731e043e.jpg?imageView2/2/w/1500/q/80' />
             </Tabs.TabPane>
           </Tabs>
         </ConfigProvider>
