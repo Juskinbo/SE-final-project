@@ -233,6 +233,100 @@ const Order = () => {
             }}
           >
             <span style={{ color: '#999' }}>横店电影城（博雅城店）</span>
+            <span style={{ color: 'red' }}>支付剩余时间13:16</span>
+          </View>
+          <Divider />
+          <View
+            style={{
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <View
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: 'row',
+              }}
+            >
+              <Image src={aquamanImg} width='65px' height='100px'></Image>
+              <View
+                style={{
+                  marginLeft: '10px',
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: '16px',
+                    lineHeight: '3',
+                    fontWeight: '500',
+                  }}
+                >
+                  海王2：失落的王国 1张
+                </span>
+                <span
+                  style={{ color: '#999', fontWeight: '500', lineHeight: '2' }}
+                >
+                  周一 01月01日 14:25
+                </span>
+                <span style={{ color: '#999' }}>5号厅 7排5座</span>
+              </View>
+            </View>
+            <Button type='primary'>付款</Button>
+          </View>
+          <Divider />
+          <View
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              width: '100%',
+              alignItems: 'center',
+            }}
+          >
+            <span style={{ color: '#999' }}>总价：58元</span>
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}
+            >
+              <Button color='#666' fill='outline' style={{ display: 'none' }}>
+                退款进度
+              </Button>
+              <Button
+                color='#666'
+                fill='outline'
+                style={{ marginLeft: '10px' }}
+              >
+                删除订单
+              </Button>
+            </View>
+          </View>
+        </View>
+      </Cell>{' '}
+      <Cell style={{ marginTop: '10px' }}>
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '100%',
+          }}
+        >
+          <View
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: '100%',
+              justifyContent: 'space-between',
+            }}
+          >
+            <span style={{ color: '#999' }}>横店电影城（博雅城店）</span>
             <span style={{ color: '#999' }}>退款成功</span>
           </View>
           <Divider />
