@@ -21,3 +21,5 @@ npm install
 ```bash
 npm run dev:weapp
 ```
+
+打开微信开发者工具，导入项目，选择 `dist` 目录。
